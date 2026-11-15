@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantbench"
+version = "0.1.0"
+description = "Reproducible LLM quantization benchmarks on consumer GPUs: latency, throughput, memory, quality."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [{ name = "RK (ramkumar-mv)" }]
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==8.3.4", "ruff==0.8.4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quantbench"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
