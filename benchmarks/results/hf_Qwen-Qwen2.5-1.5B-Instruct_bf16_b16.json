@@ -1,0 +1,91 @@
+{
+  "schema": "quantbench.result/v1",
+  "created_unix": 1794742640,
+  "config": {
+    "backend": "hf-transformers",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "format": "bf16",
+    "batch": 16,
+    "prompt_len": 512,
+    "new_tokens": 128,
+    "warmup": 2,
+    "repeats": 5,
+    "decode": "greedy generate(), min_new_tokens=max_new_tokens"
+  },
+  "env": {
+    "python": "3.11.0",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.56.2"
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5070 Ti",
+      "total_memory_mib": 16302,
+      "compute_capability": "12.0",
+      "cuda_runtime": "12.8"
+    }
+  },
+  "raw": {
+    "ttft_ms": [
+      497.224,
+      489.0922,
+      487.7044,
+      490.3662,
+      502.8766
+    ],
+    "generate_ms": [
+      3881.325,
+      3924.0297,
+      4013.5146,
+      3869.3214,
+      3951.6855
+    ],
+    "decode_tok_s": [
+      599.2405451814985,
+      591.7877508963822,
+      576.756857587946,
+      601.3693226829406,
+      587.0593909091253
+    ]
+  },
+  "summary": {
+    "ttft_ms": {
+      "n": 5,
+      "mean": 493.45268,
+      "std": 6.415138156891084,
+      "min": 487.7044,
+      "p50": 490.3662,
+      "p90": 500.61556,
+      "p99": 502.650496,
+      "max": 502.8766
+    },
+    "generate_ms": {
+      "n": 5,
+      "mean": 3927.9752399999998,
+      "std": 58.11893766917122,
+      "min": 3869.3214,
+      "p50": 3924.0297,
+      "p90": 3988.78296,
+      "p99": 4011.041436,
+      "max": 4013.5146
+    },
+    "decode_tok_s": {
+      "n": 5,
+      "mean": 591.2427734515785,
+      "std": 9.926615741268456,
+      "min": 576.756857587946,
+      "p50": 591.7877508963822,
+      "p90": 600.5178116823638,
+      "p99": 601.2841715828829,
+      "max": 601.3693226829406
+    }
+  },
+  "derived": {
+    "weight_bytes": 3087428608,
+    "peak_vram_bytes": 5846363648,
+    "decode_tok_s_p50": 591.7877508963822,
+    "ttft_ms_p50": 490.3662
+  }
+}
