@@ -13,7 +13,8 @@ throughput, peak memory **and quality loss** in one table, with raw numbers and 
 |---|---|---|---|---|---|---|
 | _pending_ | | | | | | |
 
-**Reference hardware:** NVIDIA RTX 5070 Ti 16 GB (Blackwell, sm_120), CUDA 12.8.
+**Reference hardware:** all numbers are measured on my personal workstation: NVIDIA RTX 5070 Ti 16 GB
+(Blackwell, sm_120), CUDA 12.8. No cloud or employer hardware is used.
 
 ## Install
 
