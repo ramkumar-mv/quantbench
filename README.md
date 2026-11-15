@@ -27,7 +27,7 @@ uv run pytest -q
 ## Methodology
 - Warmup runs are discarded; GPU timings synchronize the device before reading the clock.
 - Reported: n, mean, sample std, min, p50/p90/p99, max. Raw samples are always saved.
-- Quality is measured alongside speed (perplexity + task evals, including Indic languages).
+- Quality is measured alongside speed (perplexity + task evals).
 
 See [`benchmarks/README.md`](benchmarks/README.md) for the result file format.
 
